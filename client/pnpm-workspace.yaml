@@ -1,0 +1,6 @@
+publicHoistPattern:
+  # These monaco-languagesever and its dependencies try to resolve each other,
+  # in addition vscode-textmate and vscode-oniguruma are CommonJS and must be
+  # run though vite's "optimize". We hoist anything with "vscode-" in the
+  # package name to the root node_modules
+  - "*vscode-*"
